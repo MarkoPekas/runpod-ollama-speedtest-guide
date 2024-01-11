@@ -41,10 +41,12 @@ nano speed.py
 import requests
 import json
 
+MODEL_OLLAMA="mixtral:8x7b"
+
 def send_request():
     url = "http://localhost:11434/api/generate"
     payload = {
-        "model": "mixtral:8x7b", # make sure to set the model here too
+        "model": MODEL_OLLAMA, # make sure to set the model here too
         "prompt": "Why is the sky blue?",
         "stream": False  # Adjust this based on whether you want streaming or not
     }
